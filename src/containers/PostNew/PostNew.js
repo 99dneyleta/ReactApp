@@ -116,48 +116,50 @@ class PostNew extends Component {
                 <div className="form-group col-md-4">
                     <label htmlFor="inputState">Type of drive</label>
                     <select id="inputState" className="form-control" name="fuelConsumption" value={form.fuelConsumption} onChange={this.handleChange}>
-                        <option value="1">full drive</option>
-                        <option value="2">front drive</option>
-                        <option value="3">rear drive</option>
+                        <option value="full drive">full drive</option>
+                        <option value="front drive">front drive</option>
+                        <option value="rear drive">rear drive</option>
                     </select>
                 </div>
                 <div className="form-group col-md-4">
                     <label htmlFor="inputState">Fuel</label>
                     <select id="inputState" className="form-control" name="fuel" value={form.fuel} onChange={this.handleChange}>
-                        <option value="1">Petrol</option>
-                        <option value="2">Diesel</option>
-                        <option value="3">Gas/Gasoline</option>
-                        <option value="4">Hybrid</option>
-                        <option value="5">Electro</option>
-                        <option value="6">Other</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Gas/Gasoline">Gas/Gasoline</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Electro">Electro</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
                 <div className="form-group col-md-4">
                     <label htmlFor="inputState">Transmission</label>
                     <select id="inputState" className="form-control" name="transmission" value={form.transmission} onChange={this.handleChange}>
-                        <option value="1">Manual</option>
-                        <option value="2">Mechanic</option>
-                        <option value="3">Automatic</option>
-                        <option value="4">Typewriter</option>
-                        <option value="5">Adaptive</option>
-                        <option value="6">Variator</option>
+                        <option value="Manual">Manual</option>
+                        <option value="Mechanic">Mechanic</option>
+                        <option value="Automatic">Automatic</option>
+                        <option value="Typewriter">Typewriter</option>
+                        <option value="Adaptive">Adaptive</option>
+                        <option value="Variator">Variator</option>
                     </select>
                 </div>
                 <div className="form-group col-md-4">
                     <label htmlFor="inputState">Type of transport</label>
                     <select id="inputState" className="form-control" name="transportType" value={form.transportType} onChange={this.handleChange}>
                         <option selected>Choose..</option>
-                        <option value="1">Cars</option>
-                        <option value="2">Moto</option>
-                        <option value="3">Special machinery</option>
-                        <option value="4">Trucks</option>
-                        <option value="5">Trailers</option>
-                        <option value="6">Buses</option>
-                        <option value="7">Motorhomes</option>
-                        <option value="8">Water</option>
-                        <option value="9">Air</option>
+                        <option value="Cars">Cars</option>
+                        <option value="Moto">Moto</option>
+                        <option value="Special machinery">Special machinery</option>
+                        <option value="Trucks">Trucks</option>
+                        <option value="Trailers">Trailers</option>
+                        <option value="Buses">Buses</option>
+                        <option value="Motorhomes">Motorhomes</option>
+                        <option value="Water">Water</option>
+                        <option value="Air">Air</option>
                     </select>
                 </div>
+                
+                <div style={{marginTop:'24px', display:'inline-block'}}>
                 <div className="form-check form-check-inline">
                     <input className="form-check-input" type="checkbox" id="abs" name="abs" checked={form.abs} onChange={this.handleChange} />
                     <label className="form-check-label" htmlFor="abs">Abs</label>
@@ -174,14 +176,17 @@ class PostNew extends Component {
                     <input className="form-check-input" type="checkbox" id="Centrallock" name="centralLock" checked={form.centralLock} onChange={this.handleChange} />
                     <label className="form-check-label" htmlFor="Centrallock">Central lock</label>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="description">Description</label>
-                    <textarea className="form-control" id="description" name="description" value={form.description} onChange={this.handleChange} />
                 </div>
-
-
-
-                <button type="submit" className="btn btn-primary">Submit</button>
+                
+                <div className="form-group">
+                <br />
+                <br />
+                <br />
+                    <label htmlFor="description">Description</label>
+                    <br />
+                    <textarea style={{height:'height: 80px'}} className="form-control" id="description" name="description" value={form.description} onChange={this.handleChange} />
+                </div>
+                <button style={{marginLeft:'50%', marginTop: '50px',    marginBottom: '87px'}} type="submit" className="btn btn-primary">Submit</button>
             </form>
         );
     }

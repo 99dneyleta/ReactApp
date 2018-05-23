@@ -24,14 +24,17 @@ class Car extends Component {
 
     render() {
         return (
-            <div>
-                <ul>
-                    {console.log(this.state.car)}
+            <div >
+            <div className="card" style={{width: '50%', textAlign: 'center', marginLeft: '25%'}}>
+            <div class="card-header">{this.state.car.name}</div>
+                <ul className="list-group list-group-flush" style={{width: '100%'}}>
                     {Object.entries(this.state.car).map(([key, value]) => (
-                        <li>{`${key}:${value}`}</li>
+                        <li class="list-group-item">{`${key}:${value}`}</li>
                     ))}
                 </ul>
             </div>
+            </div>
+            
         );
     }
 }

@@ -31,7 +31,7 @@ class Header extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand logo" href="#"><img src={`${process.env.PUBLIC_URL}/img/logo1.png`} alt="logo" /></a>
+              
             </div>
             </div>
             <div className="collapse navbar-collapse" id="upmenu">

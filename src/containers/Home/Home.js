@@ -16,31 +16,12 @@ class Home extends Component {
     };
   }
 
-//   componentWillMount() {
-//     const { token } = this.props.match.params;
-//     this.setState({ token })
-//   }
-
-//   componentDidMount() {
-//     getVenue(this.state.token).then(result => {
-//       this.setState({
-//         venue: {...result.data},
-//         isLoadingGetVenue: false
-//       });
-
-//       Cookies.set(VENUE.VENUE_COOKIE_KEY, {
-//         token: this.state.token
-//       }, {expires: 1});
-
-//     }).catch(() => {
-//       this.props.history.push('/not-found');
-//     })
-//   }
 
   render() {
     return (
-      <div>
+      
         <div className="allcontain">
+<a className="navbar-brand logo" href="#"><img src={`${process.env.PUBLIC_URL}/img/logo1.png`} alt="logo" /></a>
             <div id="carousel-up" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner " role="listbox">
                     <div className="item active">
@@ -51,6 +32,7 @@ class Home extends Component {
                                 sed do eiusmod tempor incididunt ut labore </p>
                         </div>
                     </div>
+                    
                     <div className="item">
                         <img src={`${process.env.PUBLIC_URL}/img/porche.jpg`}  alt="porche" />
                         <div className="carousel-caption">
@@ -119,7 +101,7 @@ class Home extends Component {
 		        </div>
 	        </div>
         </div>
-      </div>
+      
     );
   }
 }

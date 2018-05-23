@@ -43,8 +43,8 @@ class ShowAll extends Component {
                             <p className="card-text">{car.description}
                             </p>
                             <Link to={`/car/${car.id}`} className="btn btn-primary">More info</Link>
-                            <Link to={`/car/${car.id}/edit`} style={{float: 'right'}} className="btn btn-warning">Edit</Link>
-                            <div onClick={() => this.onDeleteCar(car.id)}>Del</div>
+                            <Link to={`/car/${car.id}/edit`} style={{marginLeft: '14px'}} className="btn btn-warning">Edit</Link>
+                            <div className="btn btn-danger" style={{float: 'right'}} onClick={() => this.onDeleteCar(car.id)}>Del</div>
                         </div>
                     </div>
                 )}
