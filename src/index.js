@@ -7,16 +7,10 @@ import './styles/slider.css'
 import './styles/mystyle.css'
 import './index.css';
 import App from './App';
-import Header from "./components/Header/Header";
 import registerServiceWorker from './registerServiceWorker';
-import Footer from './components/Footer';
 
 ReactDOM.render(
-  <div className="allcontain">
-    <Header/>
-    <App />
-    <Footer />
-  </div>, 
+    <App />, 
   document.getElementById('root')
 );
 registerServiceWorker();

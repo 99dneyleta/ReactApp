@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 // import './styles.css'
 
 
 class Header extends Component {
-
   render() {
     return (
       <div>
@@ -36,27 +36,14 @@ class Header extends Component {
             </div>
             <div className="collapse navbar-collapse" id="upmenu">
               <ul className="nav navbar-nav" id="navbarontop">
-                <li className="active"><a href="#">HOME</a> </li>
-                <li className="dropdown">
-                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES <span className="caret"></span></a>
-                  <ul className="dropdown-menu dropdowncostume">
-                    <li><a href="#">Sport</a></li>
-                    <li><a href="#">Old</a></li>
-                    <li><a href="#">New</a></li>
-                  </ul>
-                </li>
-                <li className="dropdown">
-                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DEALERS <span className="caret"></span></a>
-                  <ul className="dropdown-menu dropdowncostume">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="3">3</a></li>
-                  </ul>
+                <li className="active"><Link to="/">HOME</Link> </li>
+                <li>
+                <Link to="/show-all">SHOW ALL</Link>
                 </li>
                 <li>
-                  <a href="contact.html">CONTACT</a>
+                <Link to="/contact">CONTACT</Link>
                 </li>
-                <button><span className="postnewcar">POST NEW CAR</span></button>
+                <button><span className="postnewcar"><Link className="link" to="/post-new">POST NEW CAR</Link></span></button>
               </ul>
             </div>
         </nav>
