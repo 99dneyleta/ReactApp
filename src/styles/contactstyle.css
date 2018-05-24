@@ -18,7 +18,7 @@
     top:130px;
     left: 0;
 }
-.leftside > img{
+.contact .leftside > img{
 	position: absolute!important;
     max-width: 696px;
 }

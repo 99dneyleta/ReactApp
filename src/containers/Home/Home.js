@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-// import * as Cookies from 'js-cookie';
-// import Loader from '../../components/Loader'
-// import { getVenue } from "../../api/venues";
-// import { VENUE } from '../../constants';
-// import './styles.css'
+import queryString from 'query-string';
+import { withRouter } from 'react-router-dom'
 
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+        search: {}
     //   isLoadingGetVenue: true,
     //   token: "",
     //   venue: {},
     };
   }
 
+  onChangeSearch = (e) => {
+      this.setState({
+        search: {
+            ...this.state.search,
+            [e.target.name]: e.target.value
+        }
+      })
+  }
+
+  onSearch = () => {
+      console.log(this.state.search);
+      this.props.history.push(`/show-all?${queryString.stringify(this.state.search)}`);
+  }
+
 
   render() {
+      const { search } = this.state;
     return (
       
         <div className="allcontain">
@@ -66,21 +79,33 @@ class Home extends Component {
                         </div>
                         <form className="navbar-form navbar-left searchformmargin" role="search">
                             <div className="form-group">
-                                <input type="text" className="form-control searchform" placeholder="Type model" />
+                                <select id="inputState" placeholder="Type transport" className="form-control searchform" name="transportType" value={search.transportType} onChange={this.onChangeSearch}
+                                style={{height: '42px', fontSize: '16px'}}>
+                                    <option value="" selected>Type transport</option>
+                                    <option value="Cars">Cars</option>
+                                    <option value="Moto">Moto</option>
+                                    <option value="Special machinery">Special machinery</option>
+                                    <option value="Trucks">Trucks</option>
+                                    <option value="Trailers">Trailers</option>
+                                    <option value="Buses">Buses</option>
+                                    <option value="Motorhomes">Motorhomes</option>
+                                    <option value="Water">Water</option>
+                                    <option value="Air">Air</option>
+                                </select>
                             </div>
                         </form>
                         <ul className="nav navbar-nav navbarborder">
                             <form className="navbar-form navbar-left searchformmargin" role="search">
                             <div className="form-group">
-                                <input type="text" className="form-control searchform" placeholder="Min Year" />
+                                <input type="text" className="form-control searchform" placeholder="Min Price" name="minPrice" value={search.minPrice} onChange={this.onChangeSearch} />
                             </div>
                             <form className="navbar-form navbar-left searchformmargin" role="search">
                             <div className="form-group">
-                                <input type="text" className="form-control searchform" placeholder="Max Year" />
+                                <input type="text" className="form-control searchform" placeholder="Max Price" name="maxPrice" value={search.maxPrice} onChange={this.onChangeSearch} />
                             </div>
                         </form>
                         </form>
-                            <li className="li-search"> <button className="searchbutton"><span className="glyphicon glyphicon-search "></span></button></li>
+                            <li className="li-search"> <button className="searchbutton" onClick={this.onSearch}><span className="glyphicon glyphicon-search "></span></button></li>
                         </ul>
         
                     </div>
@@ -107,4 +132,4 @@ class Home extends Component {
 }
 
 
-export default Home;
+export default withRouter(Home);

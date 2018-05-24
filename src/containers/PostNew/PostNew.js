@@ -83,35 +83,35 @@ class PostNew extends Component {
             <form onSubmit={this.addCar}>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Brand</label>
-                    <input type="text" name="name" value={form.name} onChange={this.handleChange} maxLength="100" className="form-control" placeholder="Enter Brand" />
+                    <input required type="text" name="name" value={form.name} onChange={this.handleChange} maxLength="100" className="form-control" placeholder="Enter Brand" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">City</label>
-                    <input type="text" name="city" value={form.city} onChange={this.handleChange} maxLength="100" className="form-control" placeholder="Enter City" />
+                    <input required type="text" name="city" value={form.city} onChange={this.handleChange} maxLength="100" className="form-control" placeholder="Enter City" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Color</label>
-                    <input type="text" name="color" value={form.color} onChange={this.handleChange} maxLength="100" className="form-control" placeholder="Enter Color" />
+                    <input required type="text" name="color" value={form.color} onChange={this.handleChange} maxLength="100" className="form-control" placeholder="Enter Color" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Phone</label>
-                    <input type="text"  name="phone" value={form.phone} onChange={this.handleChange}  maxLength="100" className="form-control" placeholder="Enter Phone" />
+                    <input required type="text"  name="phone" value={form.phone} onChange={this.handleChange}  maxLength="100" className="form-control" placeholder="Enter Phone" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Fuel consumption</label>
-                    <input type="decimal"  name="fuelConsumption" value={form.fuelConsumption} onChange={this.handleChange} className="form-control" placeholder="Enter fuel consumption" />
+                    <input required type="decimal"  name="fuelConsumption" value={form.fuelConsumption} onChange={this.handleChange} className="form-control" placeholder="Enter fuel consumption" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Price</label>
-                    <input type="number" name="price" value={form.price} onChange={this.handleChange} className="form-control" placeholder="Enter Price" />
+                    <input required type="number" name="price" value={form.price} onChange={this.handleChange} className="form-control" placeholder="Enter Price" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Volume</label>
-                    <input type="decimal" name="volume" value={form.volume} onChange={this.handleChange} className="form-control" placeholder="Enter Volume" />
+                    <input required type="decimal" name="volume" value={form.volume} onChange={this.handleChange} className="form-control" placeholder="Enter Volume" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Mileage</label>
-                    <input type="number" name="run" value={form.run} onChange={this.handleChange} className="form-control" placeholder="Enter Mileage" />
+                    <input required type="number" name="run" value={form.run} onChange={this.handleChange} className="form-control" placeholder="Enter Mileage" />
                 </div>
                 <div className="form-group col-md-4">
                     <label htmlFor="inputState">Type of drive</label>

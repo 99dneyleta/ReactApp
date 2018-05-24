@@ -6,7 +6,7 @@ class Contact extends Component {
 
     render() {
       return (
-        <div className="allcontain">
+        <div className="allcontain contact">
         <div id="carousel-up" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner " role="listbox">
                 <div className="item active">
@@ -70,24 +70,24 @@ class Contact extends Component {
                 </div>
             </nav>
         </div>
-        <div class="allcontain">
-          <div class="contact">
-            <div class="newslettercontent">
-              <div class="leftside">
+        <div className="allcontain">
+          <div className="contact">
+            <div className="newslettercontent">
+              <div className="leftside">
                 <img id="image_border" src={`${process.env.PUBLIC_URL}/img/border.png`} alt="border" />
-                  <div class="contact-form">
+                  <div className="contact-form">
                     <h1>Contact Us</h1>
-                      <div class="form-group group-coustume">
-                        <input type="text" class="form-control name-form" placeholder="Name"/>
-                        <input type="text" class="form-control email-form" placeholder="E-mail"/>
-                        <input type="text" class="form-control subject-form" placeholder="Subject"/>
-                        <textarea rows="4" cols="50" class="message-form"></textarea>
-                        <button type="submit" class="btn btn-default btn-submit">Submit</button>
+                      <div className="form-group group-coustume">
+                        <input type="text" className="form-control name-form" placeholder="Name"/>
+                        <input type="text" className="form-control email-form" placeholder="E-mail"/>
+                        <input type="text" className="form-control subject-form" placeholder="Subject"/>
+                        <textarea rows="4" cols="50" className="message-form"></textarea>
+                        <button type="submit" className="btn btn-default btn-submit">Submit</button>
                       </div>
                   </div>
               </div>
-              <div class="google-maps">
-              <div id="googleMap"></div>
+              <div className="google-maps">
+              <div id="googleMap" style={{ minHeight: '400px' }}></div>
 
               </div>
             </div>
